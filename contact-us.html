@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+
+    body {
+      margin: 0;
+      background: linear-gradient(to left, #3b0000, #000);
+
+    }
+
+    .navbar {
+      background-color: transparent;
+    }
+
+
+    .navbar .nav-link,
+    .navbar .navbar-brand,
+    .dropdown-item {
+      color: white;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .dropdown-item:hover {
+      color: #bd0c0c;
+
+    }
+
+
+    .list-unstyled a {
+      display: inline-block;
+
+      color: white;
+
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+
+    .list-unstyled a:hover {
+      color: red;
+      text-shadow:
+        0 0 3px #ff0000,
+        0 0 6px #ff0000,
+        0 0 12px #ff0000;
+    }
+     .list-unstyled li:hover {
+            color: red;
+            text-shadow:
+                0 0 3px #ff0000,
+                0 0 6px #ff0000,
+                0 0 12px #ff0000;
+        }
+
+    .navbar-brand img {
+      height: 90px;
+      width: 230px;
+      margin-top: 0;
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .zero {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./for contact us bg 8k");
+
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+    .main {
+      min-height: 100vh;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+    .main-container {
+      display: flex;
+      max-width: 500px;
+      gap: px;
+      padding: 30px;
+      border-radius: 10px;
+      align-items: center;
+
+
+    }
+
+
+
+    .inform {
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      min-width: 510px;
+
+
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-row input {
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      background-color: rgb(248, 248, 248);
+      border: 1px solid grey;
+      border-radius: 5px;
+      height: 40px;
+      padding: 10px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: black;
+      border: none;
+    }
+
+    #submit-btn {
+      background: linear-gradient(200deg, rgb(175, 34, 32), rgb(65, 7, 7), rgb(175, 34, 32));
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 22px;
+      border: none;
+
+    }
+
+    #submit-btn:hover {
+      text-shadow:
+        0 0 3px #ff0000,
+        0 0 6px #ff0000,
+        0 0 12px #ff0000;
+      color: white;
+      box-shadow:
+        0 0 3px #ff0000,
+        0 0 6px #ff0000,
+        0 0 12px #ff0000;
+    }
+
+    .inform p {
+      margin-bottom: 20px;
+      color: rgb(118, 14, 14);
+      display: flex;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 28px;
+      text-transform: capitalize;
+      text-shadow:
+        0 0 3px #ff0000,
+        0 0 6px #ff0000,
+        0 0 12px #ff0000;
+    }
+
+
+
+
+
+    .accordion-button {
+      font-weight: 600;
+    }
+
+    .faq-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .info-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      min-width: 550px;
+      margin-left: 50px;
+    }
+
+    .info-card {
+      width: calc(43% - 1px);
+      /* 2 boxes per row */
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    .info-card i {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #ff2a2a;
+    }
+
+    .info-card h5 {
+      margin: 5px 0;
+      font-weight: 600;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+    }
+
+    .map-box {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .text-center {
+      text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff4d4d,
+        0 0 30px #ff1a1a;
+      padding-top: 20px;
+    }
+
+    .container h2 {
+      text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff4d4d,
+        0 0 30px #ff1a1a;
+    }
+
+    .logo-section h2 {
+      text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff4d4d,
+        0 0 30px #ff1a1a;
+
+
+    }
+
+
+
+
+
+
+
+    /* logo slider */
+
+
+    .logo-section {
+      padding: 60px 0;
+      text-align: center;
+
+      background: linear-gradient(90deg, #000, #111, #363434);
+
+    }
+
+    .logo-section h2 {
+      color: white;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .logo-slider {
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+    }
+
+    .logo-track {
+      display: flex;
+      gap: 70px;
+      animation: slide 20s linear infinite;
+      align-items: center;
+
+
+
+    }
+
+    .logo-track img {
+      height: 60px;
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+
+    .logo-track img:hover {
+      filter: grayscale(22%);
+      transform: scale(1.1);
+    }
+
+    .nav-link.active {
+      color: #bd0c0c !important;
+    }
+
+
+
+    /* logo ki animation */
+    @keyframes slide {
+
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+
+    }
+
+    /* responsive k liye (logo) */
+    @media(max-width:768px) {
+
+      .logo-track img {
+        height: 40px;
+      }
+
+    }
+
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="zero">
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="#">
+          <img src="./adobe-express.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-white" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link me-3" target="_blank" aria-current="page" href="./main-project.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3" target="_blank" href="./about-us-ver-2.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active me-3" href="./contact-us.html">Contact us</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link me-3" target="_blank" href="./pre-owned-cars-copy.html">Pre-owned cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link me-3" target="_blank" href="./range-of-car-ver-2.html">Range of cars</a>
+            </li>
+
+
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <!-- cenTer area (form k liye)-->
+
+    <div class="main-container">
+
+
+
+
+      <!-- ledt side k boxes -->
+      <div class="info-boxes">
+
+        <div class="info-card" data-aos="flip-left">
+          <i class="fa-brands fa-whatsapp"></i>
+          <h5>WhatsApp </h5>
+          <p>+92 87654687676</p>
+        </div>
+
+        <div class="info-card" data-aos="flip-right">
+          <i class="fa-solid fa-phone"></i>
+          <h5>Phone</h5>
+          <p>+92 300 1965787</p>
+        </div>
+
+        <div class="info-card" data-aos="flip-left">
+          <i class="fa-solid fa-envelope"></i>
+          <h5>Email</h5>
+          <p>caravan@gmail.com</p>
+        </div>
+
+        <div class="info-card" data-aos="flip-right">
+          <i class="fa-solid fa-clock"></i>
+          <h5>Working Hours</h5>
+          <p>9 AM - 9 PM</p>
+        </div>
+
+      </div>
+
+      <!-- right side form-->
+
+
+      <div class="inform" data-aos="fade-left">
+        <p>contact us</p>
+        <form>
+
+          <div class="form-row">
+
+            <input type="text" placeholder="First Name" pattern="[A-Za-z]+" xtitle="Only alphabets allowed" required>
+            <input type="text" placeholder="Last Name" pattern="[A-Za-z]+" required>
+          </div>
+
+          <input type="email" placeholder="Enter your email address" required>
+
+          <input type="tel" maxlength="12" title="Only numbers allowed" placeholder="phone no." required>
+
+          <textarea placeholder="Tell us how we can help you" rows="4" required></textarea>
+
+          <button id="submit-btn" type="submit">Submit</button>
+
+        </form>
+
+      </div>
+
+
+
+    </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="faq-section" data-aos="fade-up">
+    <div class="container my-5">
+
+      <div class="row align-items-center">
+
+        <!-- LEFT SIDE IMAGE -->
+        <div class="col-md-5 text-center">
+          <img src="./teamwork high five-bro.png" alt="FAQ Image" class="img-fluid faq-img">
+        </div>
+
+        <!-- RIGHT SIDE FAQ -->
+        <div class="col-md-7">
+          <h2 class="mb-4 text-white">Frequently Asked Questions</h2>
+
+          <div class="accordion" id="faqAccordion">
+
+            <!-- Tumhara pura accordion yahan paste karo -->
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  What is Caravan?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Caravan is a trusted digital platform designed to help users explore, compare, and purchase
+                  high-quality
+                  pre-owned vehicles with ease and confidence.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  How can I sell my car?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Selling your car on Caravan is simple. Create an account, provide accurate vehicle details, upload
+                  clear
+                  images, and publish your listing to reach potential buyers quickly.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Is it safe to buy a used car online?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely. Caravan ensures a secure buying experience by verifying listings, promoting transparency,
+                  and
+                  supporting safe communication between buyers and sellers.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  How do I check the car history?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Caravan provides comprehensive vehicle history reports, including ownership records, accident history,
+                  and
+                  service details to help you make informed decisions.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Can I negotiate the price?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, buyers and sellers can communicate directly through the platform to discuss and negotiate pricing
+                  in
+                  a secure environment.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  How do I schedule a car inspection?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  You can easily schedule a vehicle inspection through Caravan or coordinate directly with the seller at
+                  a
+                  mutually convenient time.
+                </div>
+              </div>
+            </div>
+
+
+
+            <!-- FAQ 8 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  What payment methods are available?
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Caravan supports multiple secure payment options, including bank transfers, digital payment gateways,
+                  and
+                  cash transactions where applicable.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  Do you offer car financing options?
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, Caravan collaborates with financial partners to offer convenient car financing solutions for
+                  eligible
+                  customers.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Can I return a car if there is an issue?
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Caravan offers a dispute resolution system and limited return policies, depending on the terms of the
+                  transaction and the condition of the vehicle.
+                </div>
+
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+  </section>
+
+
+
+  <!-- logo sliders -->
+
+  <section class="logo-section" data-aos="zoom-in-up">
+
+    <h2>Our Partners</h2>
+
+    <div class="logo-slider">
+
+      <div class="logo-track">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Adobe_Systems_logo_and_wordmark.svg">
+
+        <!--ek aur dafa takay loop smooth rahy -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Adobe_Systems_logo_and_wordmark.svg">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- map section-->
+  <section class="map-section bg-black" data-aos="fade-up-right">
+    <div class="container  my-5">
+
+      <h2 class="text-center  text-white mt-5  mb-5">Our Location</h2>
+
+      <div class="map-box">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28536.59116906478!2d37.901835034765625!3d26.614078023182746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a5ab96a9136819%3A0x39bae58691885d6!2sAlUla%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1774634373246!5m2!1sen!2s"
+          width="100%" height="400" style="border:0; border-radius:15px;margin-bottom: 40px; background: #000; "
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- footer -->
+  <footer class="text-white pt-5" id="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- yahn logo or paragraph -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h4 class="fw-bold">CARAVAN </h4>
+                <p>
+                    Caravan offers premium luxury and certified pre-owned vehicles with trusted quality and
+                    outstanding customer service..
+                </p>
+
+                <div class="list-unstyled">
+                    <a href="https://www.facebook.com/"  target="_blank" class="text-white me-3 fs-5"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/?hl=en"  target="_blank" class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/"  target="_blank" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"  target="_blank" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- yahan par sab pages ki link -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="fw-bold">Reach us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./main-project.html" target="_blank" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="./about-us-ver-2.html" target="_blank" class="text-white text-decoration-none">About</a></li>
+
+                    <li><a href="./contact-us.html" target="_blank" class="text-white text-decoration-none">Contact us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="fw-bold">Services</h5>
+                <ul >
+                    <li>Car Sales</li>
+                    <li>Pre-Owned Cars</li>
+                    <li>Car Financing</li>
+                    <li>Customer Support</li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="fw-bold">Contact</h5>
+
+                <p><i class="fa-solid fa-location-dot me-2">
+
+                    </i>Karachi, Pakistan</p>
+                <p><i class="fa-solid fa-phone me-2">
+
+                    </i>+92 300 1965787</p>
+                <p><i class="fa-solid fa-envelope me-2">
+
+                    </i>caravan@gmail.com</p>
+            </div>
+
+        </div>
+
+        <hr class="border-light">
+
+
+        <div class="text-center">
+            <p class="mb-0">
+                © 2026 Luxury Cars | All Rights Reserved
+            </p>
+        </div>
+
+    </div>
+
+
+</footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+
+</body>
+
+</html>
