@@ -1,104 +1,109 @@
-* {
-      box-sizing: border-box;
-    }
+*{
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
+body {
+  margin: 0;
 
-      font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-      background: linear-gradient(to left, #3b0000, #000);
-    }
+   background: linear-gradient(120deg,
+            #3a2c0f,
+            #8c6b1f,
+            #d4af37,
+            #3a2c0f);
+}
 
-    h1 {
-      text-transform: capitalize;
-      color: #ffffff;
-      text-align: center;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      margin-bottom: 60px;
-      margin-top: 90px;
+h1 {
+  text-transform: capitalize;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 60px;
+  margin-top: 90px;
 
-      text-align: center;
-      font-size: 48px;
-
-
-    }
-
-
-    .navbar {
-      background-color: transparent;
-    }
+  text-align: center;
+  font-size: 48px;
 
 
-    .navbar .nav-link,
-    .navbar .navbar-brand,
-    .dropdown-item {
-      color: white !important;
-    }
+}
+
+.navbar {
+  background-color: transparent;
+}
 
 
-    .navbar .nav-link:hover,
-    .navbar .dropdown-item:hover {
-      color: #bd0c0c !important;
-
-    }
-
-    main {
-      flex: 1;
-    }
+.navbar .nav-link,
+.navbar .navbar-brand,
+.dropdown-item {
+  color: white !important;
+}
 
 
-    .list-unstyled a {
-      display: inline-block;
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover {
+  color: #d4af37 !important;
+  /* optional: gold color on hover */
+}
 
-      color: white;
+.navigation img {
 
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
 
-    .list-unstyled a:hover {
-      color: red;
-      text-shadow:
-        0 0 3px #ff0000,
-        0 0 6px #ff0000,
-        0 0 12px #ff0000;
-    }
+  width: 360px;
+  height: 240px;
+  margin-top: -35px;
+}
 
-    .list-unstyled li:hover {
-      color: red;
-      text-shadow:
-        0 0 3px #ff0000,
-        0 0 6px #ff0000,
-        0 0 12px #ff0000;
-    }
+#navbarNavDropdown {
+  margin-top: -35px;
+
+
+  padding-right: 50px;
+}
+
+.nav-link.active {
+  color: #d4af37 !important;
+}
 
 
 
 
 
 
+main {
+  flex: 1;
+}
+
+.list-unstyled a {
+  display: inline-block;
+
+  color: white;
+  /* normal color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
 
 
+.list-unstyled a:hover {
+  color: #d4af37;
+
+  text-shadow:
+    0 0 3px #b8962e,
+    0 0 6px #c9a227,
+    0 0 12px #d4af37,
+    0 0 20px #8c6b1f,
+    0 0 30px #5c4715;
+
+}
+
+.navigation img {
 
 
-
-
-
-    
-    
-
-    
-
-
-    .navbar-brand img {
-      height: 90px;
-      width: 230px;
-      margin-top: 0;
-
-
-    }
+  width: 360px;
+  height: 240px;
+  margin-top: -35px;
+}
     #footer{
         background: #000;
     }
@@ -124,15 +129,14 @@
     }
 
     .card:hover {
-      box-shadow:
-        0 0 5px #ff0000,
-        0 0 10px #ff4d4d,
-        0 0 20px #ff4d4d,
-        0 0 30px #ff1a1a;
+    box-shadow:
+     0 0 10px #d4af37,
+     0 0 20px #ffd700,
+     0 0 30px #b8962e,
+     0 0 40px #8c6b1f;
 
 
-
-    }
+}
 
     .card img {
       width: 100%;
@@ -182,8 +186,14 @@
         color: #000;
         margin-top: 20px;
     }
-    .btn:hover{
-        border-color: #000;
-        color: #ffffff;
-        background: #000;
-    }
+   
+.btn:hover {
+    
+    color: #000000;
+    box-shadow:
+     0 0 10px #d4af37,
+     0 0 20px #ffd700,
+     0 0 30px #b8962e,
+     0 0 40px #8c6b1f;
+
+}
