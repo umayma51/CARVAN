@@ -220,7 +220,7 @@
  .zero {
 
      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-         url("./images/aboutus.jpeg");
+         url("./images/homepage.jpeg");
      height: 100vh;
      background-size: cover;
      background-position: center;
